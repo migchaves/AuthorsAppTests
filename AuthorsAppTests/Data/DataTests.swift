@@ -16,6 +16,7 @@ class DataTests: XCTestCase {
 
     override func setUpWithError() throws {
         print("Starting tests")
+        self.continueAfterFailure = false
     }
 
     override func tearDownWithError() throws {
@@ -23,9 +24,46 @@ class DataTests: XCTestCase {
     }
 
     // MARK: - Data Tests
+    
+    /// Test the received name and birthdate
+    func testAuthorName() {
+        
+        let authorExpectation = self.expectation(description: "Test received info")
+        var authorResponse: [AuthorObject]?
+        
+        AppRequests.search(author: "tolkien") { items in
+            authorResponse = items
+            authorExpectation.fulfill()
+        }
+        
+        self.waitForExpectations(timeout: 5.0) { error in
+            
+            if let error = error {
+                XCTFail("Received info error: \(error)")
+                return
+            }
+            
+            guard let strongItems = authorResponse else {
+                XCTFail("Items are nil")
+                return
+            }
+            
+            XCTAssert(strongItems.count > 0, "Number of items is 0")
+            
+            for item in strongItems {
+                
+                guard let name = item.name, let date = item.birth_date else {
+                    XCTFail("Item without name or date")
+                    return
+                }
+                
+                print("Item: \(name), birthdate: \(date)")
+            }
+        }
+    }
 
-    /// Test if the data retrivied is consistent
-    func testAuthorInformation() {
+    /// Test the received top subjects for each result
+    func testAuthorTopSubjects() {
         
         let authorExpectation = self.expectation(description: "Test received info")
         var authorResponse: [AuthorObject]?

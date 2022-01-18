@@ -10,12 +10,15 @@ import XCTest
 
 class APITests: XCTestCase {
     
+    private let timeOutInterval: TimeInterval = 3.0
+    
     /*
      Testing the response of the API and the JSON parser used
      */
 
     override func setUpWithError() throws {
         print("Starting tests")
+        self.continueAfterFailure = false
     }
 
     override func tearDownWithError() throws {
@@ -35,7 +38,7 @@ class APITests: XCTestCase {
             authorExpectation.fulfill()
         }
         
-        self.waitForExpectations(timeout: 3.0) { error in
+        self.waitForExpectations(timeout: self.timeOutInterval) { error in
             XCTAssertNil(error, "Get Authors: retrivied an error waiting for expectations")
             XCTAssertNotNil(authorResponse, "Get Authors: the response is nil")
         }
@@ -52,7 +55,7 @@ class APITests: XCTestCase {
             authorExpectation.fulfill()
         }
         
-        self.waitForExpectations(timeout: 3.0) { error in
+        self.waitForExpectations(timeout: self.timeOutInterval) { error in
             
             if let error = error {
                 XCTFail("Search 'a' string test error: \(error)")
@@ -79,7 +82,8 @@ class APITests: XCTestCase {
                 authorExpectation.fulfill()
             }
             
-            self.waitForExpectations(timeout: 5.0) { error in
+            self.waitForExpectations(timeout: self.timeOutInterval) { error in
+                
                 if let error = error {
                     XCTFail("Error: \(error.localizedDescription)")
                 }
