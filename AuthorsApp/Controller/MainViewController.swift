@@ -12,6 +12,7 @@ class MainViewController: UIViewController {
     // MARK: - Outlets
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     // MARK: - Vars
     
@@ -33,16 +34,14 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = "Search Authors"
-        
-        self.loadData()
     }
 
     // MARK: - Handle info
     
     /// Load data from server
-    private func loadData() {
+    private func loadData(text: String) {
         
-        AppRequests.search(author: "Tolkien") { [weak self] items in
+        AppRequests.search(author: text) { [weak self] items in
                 
             guard let self = self else {
                 return
@@ -81,5 +80,19 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         cell.detailTextLabel?.text = "\(author.work_count ?? 0) works"
         
         return cell
+    }
+}
+
+// MARK: - UISearchBarDelegate
+
+extension MainViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.view.endEditing(true)
+        self.loadData(text: self.searchBar.text ?? "")
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.view.endEditing(true)
     }
 }

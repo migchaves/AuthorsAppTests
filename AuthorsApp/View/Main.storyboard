@@ -16,12 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="HQc-Ch-Kys">
+                            <searchBar contentMode="redraw" placeholder="Search for authors" translatesAutoresizingMaskIntoConstraints="NO" id="HQc-Ch-Kys">
                                 <rect key="frame" x="0.0" y="88" width="414" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="jTP-B3-o6U"/>
                                 </constraints>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="search"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="EY8-5z-MgZ"/>
+                                </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hCT-B6-F5b">
                                 <rect key="frame" x="0.0" y="132" width="414" height="730"/>
@@ -72,6 +75,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Uk4-7w-Woj"/>
                     <connections>
+                        <outlet property="searchBar" destination="HQc-Ch-Kys" id="z5h-eM-8EP"/>
                         <outlet property="tableView" destination="hCT-B6-F5b" id="cFt-fD-CGc"/>
                     </connections>
                 </viewController>
