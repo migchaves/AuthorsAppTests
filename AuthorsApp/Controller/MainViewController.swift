@@ -34,6 +34,9 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = "Search Authors"
+        
+        // Add accessibility id's
+        self.searchBar.accessibilityLabel = AccessibilityIdentifiers.Home.searchBar
     }
 
     // MARK: - Handle info

@@ -12,3 +12,12 @@ import UIKit
 struct ReuseIdentifiers {
     static let homeCell = "homeCell"
 }
+
+// MARK: - Acessibility identifiers
+
+struct AccessibilityIdentifiers {
+    
+    struct Home {
+        static let searchBar = "HomeSearchBar"
+    }
+}

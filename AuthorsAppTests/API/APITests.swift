@@ -10,7 +10,7 @@ import XCTest
 
 class APITests: XCTestCase {
     
-    private let timeOutInterval: TimeInterval = 3.0
+    private let timeOutInterval: TimeInterval = 10.0
     
     /*
      Testing the response of the API and the JSON parser used
@@ -28,12 +28,12 @@ class APITests: XCTestCase {
     // MARK: - API Tests
     
     /// Test the request to load authors
-    func testGetAuthors() {
+    func testGetAuthors() throws {
         
         let authorExpectation = self.expectation(description: "Get Author Test")
         var authorResponse: [AuthorObject]?
         
-        AppRequests.search(author: "tolkien") { items in
+        AppRequests.search(author: "Miguel") { items in
             authorResponse = items
             authorExpectation.fulfill()
         }
@@ -45,12 +45,12 @@ class APITests: XCTestCase {
     }
     
     /// Test if the number of authors retrivied are > 0
-    func testNumberOfAuthorsWithA() {
+    func testNumberOfAuthorsWithA() throws {
         
         let authorExpectation = self.expectation(description: "Search 'a' string test")
         var authorResponse: [AuthorObject]?
         
-        AppRequests.search(author: "a") { items in
+        AppRequests.search(author: "Miguel") { items in
             authorResponse = items
             authorExpectation.fulfill()
         }
@@ -72,13 +72,13 @@ class APITests: XCTestCase {
     }
     
     /// Measure the time spent in the request
-    func testRequestTimeMeasure() {
+    func testRequestTimeMeasure() throws {
         
         self.measure {
             
             let authorExpectation = self.expectation(description: "Measure time test")
             
-            AppRequests.search(author: "a") { items in
+            AppRequests.search(author: "Miguel") { items in
                 authorExpectation.fulfill()
             }
             

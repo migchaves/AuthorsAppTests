@@ -31,7 +31,7 @@ class DataTests: XCTestCase {
         let authorExpectation = self.expectation(description: "Test received info")
         var authorResponse: [AuthorObject]?
         
-        AppRequests.search(author: "tolkien") { items in
+        AppRequests.search(author: "Miguel") { items in
             authorResponse = items
             authorExpectation.fulfill()
         }
@@ -68,7 +68,7 @@ class DataTests: XCTestCase {
         let authorExpectation = self.expectation(description: "Test received info")
         var authorResponse: [AuthorObject]?
         
-        AppRequests.search(author: "tolkien") { items in
+        AppRequests.search(author: "Miguel") { items in
             authorResponse = items
             authorExpectation.fulfill()
         }
