@@ -27,7 +27,7 @@ class APITests: XCTestCase {
     /// Test the request to load authors
     func testGetAuthors() {
         
-        let authorExpectation = expectation(description: "Get Author Test")
+        let authorExpectation = self.expectation(description: "Get Author Test")
         var authorResponse: [AuthorObject]?
         
         AppRequests.search(author: "tolkien") { items in
@@ -35,7 +35,7 @@ class APITests: XCTestCase {
             authorExpectation.fulfill()
         }
         
-        waitForExpectations(timeout: 3.0) { error in
+        self.waitForExpectations(timeout: 3.0) { error in
             XCTAssertNil(error, "Get Authors: retrivied an error waiting for expectations")
             XCTAssertNotNil(authorResponse, "Get Authors: the response is nil")
         }
@@ -44,7 +44,7 @@ class APITests: XCTestCase {
     /// Test if the number of authors retrivied are > 0
     func testNumberOfAuthorsWithA() {
         
-        let authorExpectation = expectation(description: "Search 'a' string test")
+        let authorExpectation = self.expectation(description: "Search 'a' string test")
         var authorResponse: [AuthorObject]?
         
         AppRequests.search(author: "a") { items in
@@ -52,7 +52,7 @@ class APITests: XCTestCase {
             authorExpectation.fulfill()
         }
         
-        waitForExpectations(timeout: 3.0) { error in
+        self.waitForExpectations(timeout: 3.0) { error in
             
             if let error = error {
                 XCTFail("Search 'a' string test error: \(error)")
@@ -65,6 +65,25 @@ class APITests: XCTestCase {
             }
             
             XCTAssert(items.count > 0, "Get authors: response without items")
+        }
+    }
+    
+    /// Measure the time spent in the request
+    func testRequestTimeMeasure() {
+        
+        self.measure {
+            
+            let authorExpectation = self.expectation(description: "Measure time test")
+            
+            AppRequests.search(author: "a") { items in
+                authorExpectation.fulfill()
+            }
+            
+            self.waitForExpectations(timeout: 5.0) { error in
+                if let error = error {
+                    XCTFail("Error: \(error.localizedDescription)")
+                }
+            }
         }
     }
 }
