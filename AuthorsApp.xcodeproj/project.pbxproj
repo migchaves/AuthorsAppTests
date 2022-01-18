@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		492527612796EE8B002234BA /* Static.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492527602796EE8B002234BA /* Static.swift */; };
 		49DB059B279628E900E16712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49DB059A279628E900E16712 /* Assets.xcassets */; };
 		49DB05A9279628E900E16712 /* AuthorsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DB05A8279628E900E16712 /* AuthorsAppTests.swift */; };
 		49DB05B3279628E900E16712 /* AuthorsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DB05B2279628E900E16712 /* AuthorsAppUITests.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		492527602796EE8B002234BA /* Static.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Static.swift; sourceTree = "<group>"; };
 		49DB058E279628E700E16712 /* AuthorsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthorsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DB059A279628E900E16712 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49DB059F279628E900E16712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4925275F2796EE7B002234BA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				492527602796EE8B002234BA /* Static.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		49DB0585279628E700E16712 = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +155,7 @@
 			children = (
 				49DB05CE27962D4000E16712 /* Network */,
 				49DB05CD27962D2B00E16712 /* Objects */,
+				4925275F2796EE7B002234BA /* Utils */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -337,6 +348,7 @@
 				49DB05D227962DE200E16712 /* NetworkRequest.swift in Sources */,
 				49DB05CC27962AA900E16712 /* MainViewController.swift in Sources */,
 				49DB05D627962EDB00E16712 /* AppRequests.swift in Sources */,
+				492527612796EE8B002234BA /* Static.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
