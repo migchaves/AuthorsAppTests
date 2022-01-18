@@ -10,8 +10,6 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    // https://openlibrary.org/dev/docs/api/search
-
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -19,4 +17,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 }
-
