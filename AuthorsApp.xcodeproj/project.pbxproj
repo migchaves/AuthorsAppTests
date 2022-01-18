@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		492527612796EE8B002234BA /* Static.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492527602796EE8B002234BA /* Static.swift */; };
+		492527652796F1DC002234BA /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492527642796F1DC002234BA /* APITests.swift */; };
+		492527672796F313002234BA /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492527662796F313002234BA /* DataTests.swift */; };
 		49DB059B279628E900E16712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49DB059A279628E900E16712 /* Assets.xcassets */; };
-		49DB05A9279628E900E16712 /* AuthorsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DB05A8279628E900E16712 /* AuthorsAppTests.swift */; };
 		49DB05B3279628E900E16712 /* AuthorsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DB05B2279628E900E16712 /* AuthorsAppUITests.swift */; };
 		49DB05B5279628E900E16712 /* AuthorsAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DB05B4279628E900E16712 /* AuthorsAppUITestsLaunchTests.swift */; };
 		49DB05C62796291900E16712 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DB05C22796291900E16712 /* AppDelegate.swift */; };
@@ -41,11 +42,12 @@
 
 /* Begin PBXFileReference section */
 		492527602796EE8B002234BA /* Static.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Static.swift; sourceTree = "<group>"; };
+		492527642796F1DC002234BA /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
+		492527662796F313002234BA /* DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
 		49DB058E279628E700E16712 /* AuthorsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthorsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DB059A279628E900E16712 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49DB059F279628E900E16712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49DB05A4279628E900E16712 /* AuthorsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AuthorsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		49DB05A8279628E900E16712 /* AuthorsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorsAppTests.swift; sourceTree = "<group>"; };
 		49DB05AE279628E900E16712 /* AuthorsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AuthorsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DB05B2279628E900E16712 /* AuthorsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorsAppUITests.swift; sourceTree = "<group>"; };
 		49DB05B4279628E900E16712 /* AuthorsAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorsAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -92,6 +94,22 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		492527622796F1A0002234BA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				492527642796F1DC002234BA /* APITests.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		492527632796F1A7002234BA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				492527662796F313002234BA /* DataTests.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		49DB0585279628E700E16712 = {
 			isa = PBXGroup;
 			children = (
@@ -128,7 +146,8 @@
 		49DB05A7279628E900E16712 /* AuthorsAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				49DB05A8279628E900E16712 /* AuthorsAppTests.swift */,
+				492527622796F1A0002234BA /* API */,
+				492527632796F1A7002234BA /* Data */,
 			);
 			path = AuthorsAppTests;
 			sourceTree = "<group>";
@@ -356,7 +375,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49DB05A9279628E900E16712 /* AuthorsAppTests.swift in Sources */,
+				492527652796F1DC002234BA /* APITests.swift in Sources */,
+				492527672796F313002234BA /* DataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
