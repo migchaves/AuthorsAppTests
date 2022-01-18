@@ -7,17 +7,97 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D53E6B9D-1C77-455D-8C3B-9DD8949440D4"
+            uuid = "22DDFF44-0F21-4B06-A9E8-4F84465486A3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AuthorsAppUITests/Main/SearchAuthorUITests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "testSearchBar()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "22DDFF44-0F21-4B06-A9E8-4F84465486A3 - 3e255b2d888a7b17"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AuthorsAppUITests.SearchAuthorUITests.testSearchBar() throws -&gt; ()"
+                  moduleName = "AuthorsAppUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/Downloads/AuthorsApp/AuthorsAppUITests/Main/SearchAuthorUITests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "3016">
+               </Location>
+               <Location
+                  uuid = "22DDFF44-0F21-4B06-A9E8-4F84465486A3 - 3e255b2d888a7b17"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AuthorsAppUITests.SearchAuthorUITests.testSearchBar() throws -&gt; ()"
+                  moduleName = "AuthorsAppUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/Downloads/AuthorsApp/AuthorsAppUITests/Main/SearchAuthorUITests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "3172">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FAB31592-670D-4D17-BDDD-611B5D6F9976"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AuthorsAppUITests/Main/SearchAuthorUITests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "testSearchBar()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FAB31592-670D-4D17-BDDD-611B5D6F9976 - 3e255b2d888a7ab8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AuthorsAppUITests.SearchAuthorUITests.testSearchBar() throws -&gt; ()"
+                  moduleName = "AuthorsAppUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/Downloads/AuthorsApp/AuthorsAppUITests/Main/SearchAuthorUITests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "2765">
+               </Location>
+               <Location
+                  uuid = "FAB31592-670D-4D17-BDDD-611B5D6F9976 - 3e255b2d888a7ab8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AuthorsAppUITests.SearchAuthorUITests.testSearchBar() throws -&gt; ()"
+                  moduleName = "AuthorsAppUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/Downloads/AuthorsApp/AuthorsAppUITests/Main/SearchAuthorUITests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "2682">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

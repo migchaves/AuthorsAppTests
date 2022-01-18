@@ -19,5 +19,6 @@ struct AccessibilityIdentifiers {
     
     struct Home {
         static let searchBar = "HomeSearchBar"
+        static let tableView = "HomeTableView"
     }
 }

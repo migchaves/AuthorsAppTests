@@ -20,9 +20,11 @@ class MainViewController: UIViewController {
         didSet {
             
             guard self.sourceArray.count > 0 else {
+                self.tableView.isHidden = true
                 return
             }
             
+            self.tableView.isHidden = false
             self.tableView.reloadData()
         }
     }
@@ -37,6 +39,7 @@ class MainViewController: UIViewController {
         
         // Add accessibility id's
         self.searchBar.accessibilityLabel = AccessibilityIdentifiers.Home.searchBar
+        self.tableView.accessibilityLabel = AccessibilityIdentifiers.Home.tableView
     }
 
     // MARK: - Handle info
