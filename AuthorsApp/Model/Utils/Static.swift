@@ -22,3 +22,10 @@ struct AccessibilityIdentifiers {
         static let tableView = "HomeTableView"
     }
 }
+
+// MARK: - Segues
+
+struct Segue {
+    
+    static let toDetails = "segueToDetails"
+}

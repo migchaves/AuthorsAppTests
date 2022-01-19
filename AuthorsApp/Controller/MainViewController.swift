@@ -41,6 +41,20 @@ class MainViewController: UIViewController {
         self.searchBar.accessibilityLabel = AccessibilityIdentifiers.Home.searchBar
         self.tableView.accessibilityLabel = AccessibilityIdentifiers.Home.tableView
     }
+    
+    // MARK: - Segue
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == Segue.toDetails {
+            
+            if let vc = segue.destination as? DetailsViewController,
+               let author = sender as? AuthorObject {
+                
+                vc.author = author
+            }
+        }
+    }
 
     // MARK: - Handle info
     
@@ -69,11 +83,15 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.sourceArray.count
     }
- 
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-    }
         
+        self.performSegue(
+            withIdentifier: Segue.toDetails,
+            sender: self.sourceArray[indexPath.row])
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(
