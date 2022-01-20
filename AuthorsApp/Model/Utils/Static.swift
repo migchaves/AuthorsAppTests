@@ -20,6 +20,7 @@ struct AccessibilityIdentifiers {
     struct Home {
         static let searchBar = "HomeSearchBar"
         static let tableView = "HomeTableView"
+        static let tableCellTitleLabel = "HomeTableCellTitle"
     }
 }
 

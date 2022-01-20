@@ -101,6 +101,8 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         let author = self.sourceArray[indexPath.row]
         
         cell.textLabel?.text = author.name ?? "---"
+        cell.textLabel?.accessibilityLabel = AccessibilityIdentifiers.Home.tableCellTitleLabel
+        
         cell.detailTextLabel?.text = "\(author.work_count ?? 0) works"
         
         return cell

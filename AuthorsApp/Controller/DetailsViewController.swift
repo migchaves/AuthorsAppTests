@@ -25,6 +25,8 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = self.author?.name ?? "---"
+        
+        self.bindData()
     }
     
     // MARK: - Data handling
