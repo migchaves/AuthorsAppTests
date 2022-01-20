@@ -15,7 +15,7 @@ Using this API to retrieve data, there are some tests to measure the time respon
 Example: retrieving data and check if it's working
 
 ```swift
-func testGetAuthors() throws {
+    func testGetAuthors() throws {
         
         let authorExpectation = self.expectation(description: "Get Author Test")
         var authorResponse: [AuthorObject]?
@@ -35,7 +35,7 @@ func testGetAuthors() throws {
 2 - Measure the time the request takes
 
 ```swift
-/// Measure the time spent in the request
+    /// Measure the time spent in the request
     func testRequestTimeMeasure() throws {
         
         self.measure {
@@ -59,7 +59,7 @@ func testGetAuthors() throws {
 3 - Checking the consistency of the data
 
 ```swift
-func testGetAuthors() throws {
+    func testGetAuthors() throws {
         
         let authorExpectation = self.expectation(description: "Get Author Test")
         var authorResponse: [AuthorObject]?
@@ -113,7 +113,7 @@ For this case the flow is:
 - Check if the table view appears with some rows
 
 ```swift
-/// Test the input text of the search bar
+    /// Test the input text of the search bar
     func testSearchBar() throws {
                 
         // Check if search bar exists
