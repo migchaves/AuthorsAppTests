@@ -99,6 +99,22 @@ Example: retrieving data and check if it's working
 
 4 - Prepare the UI tests
 
+Before the tests, update the AppDelegate to remove the animations, so the tests can run faster
+
+```swift
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        // Set animations to false, to perfom the UI tests
+        if CommandLine.arguments.contains("RunningTests") {
+            UIView.setAnimationsEnabled(false)
+        }
+        
+        return true
+    }
+```
+
+After that, prepare the tests setting up the environment:
+
 ```swift
     private var app: XCUIApplication!
     
