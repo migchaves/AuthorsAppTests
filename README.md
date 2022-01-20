@@ -59,9 +59,10 @@ Example: retrieving data and check if it's working
 3 - Checking the consistency of the data
 
 ```swift
-    func testGetAuthors() throws {
+    /// Test the received name and birthdate
+    func testAuthorName() {
         
-        let authorExpectation = self.expectation(description: "Get Author Test")
+        let authorExpectation = self.expectation(description: "Test received info")
         var authorResponse: [AuthorObject]?
         
         AppRequests.search(author: "Miguel") { items in
@@ -69,9 +70,29 @@ Example: retrieving data and check if it's working
             authorExpectation.fulfill()
         }
         
-        self.waitForExpectations(timeout: self.timeOutInterval) { error in
-            XCTAssertNil(error, "Get Authors: retrivied an error waiting for expectations")
-            XCTAssertNotNil(authorResponse, "Get Authors: the response is nil")
+        self.waitForExpectations(timeout: 5.0) { error in
+            
+            if let error = error {
+                XCTFail("Received info error: \(error)")
+                return
+            }
+            
+            guard let strongItems = authorResponse else {
+                XCTFail("Items are nil")
+                return
+            }
+            
+            XCTAssert(strongItems.count > 0, "Number of items is 0")
+            
+            for item in strongItems {
+                
+                guard let name = item.name, let date = item.birth_date else {
+                    XCTFail("Item without name or date")
+                    return
+                }
+                
+                print("Item: \(name), birthdate: \(date)")
+            }
         }
     }
 ```
