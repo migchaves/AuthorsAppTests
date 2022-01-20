@@ -14,8 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        // Set animations to false, to perfom the UI tests
         if CommandLine.arguments.contains("RunningTests") {
-            // Set animations to false, to perfom the UI tests
             UIView.setAnimationsEnabled(false)
         }
         

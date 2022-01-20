@@ -13,6 +13,8 @@ class DataTests: XCTestCase {
     /*
      Testing the consistency of the data retrivied
      */
+    
+    private let timeOutInterval: TimeInterval = 10.0
 
     override func setUpWithError() throws {
         print("Starting tests")
@@ -36,7 +38,7 @@ class DataTests: XCTestCase {
             authorExpectation.fulfill()
         }
         
-        self.waitForExpectations(timeout: 5.0) { error in
+        self.waitForExpectations(timeout: self.timeOutInterval) { error in
             
             if let error = error {
                 XCTFail("Received info error: \(error)")
