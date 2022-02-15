@@ -192,7 +192,6 @@ For this case the flow is:
     }
 ```
 
-#
 # License
 
 Responsive Tools is released under the MIT license.
